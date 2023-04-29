@@ -2,5 +2,14 @@
   "dependencies": {
     "discord.js": "^14.9.0",
     "dotenv": "^16.0.3"
-  }
+  },
+  "name": "personalbot",
+  "description": "This bot is my personal project to see what i can create with JS.",
+  "version": "1.0.0",
+  "main": "./src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
