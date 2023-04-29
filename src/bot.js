@@ -34,9 +34,15 @@ bot.once(Events.ClientReady, c => {
                 .setRequired(false)
         )
     
+    const meow = new SlashCommandBuilder()
+        .setName('meow')
+        .setDescription('logs the bot out')
+    
+    
     //The following commands physically creat the command to be referenced later. It is also tied to a specific Guild(server)
     bot.application.commands.create(ping, guildID);
     bot.application.commands.create(hello, guildID);
+    bot.application.commands.create(meow, guildID);
 });
 
 //The following is the bot waiting for a certain interaction from the user.
@@ -44,14 +50,20 @@ bot.on(Events.InteractionCreate, interaction => {
 
     if(!interaction.isChatInputCommand()) return;
 
-    if(interaction.commandName === "ping"){
+    if(interaction.commandName === 'ping'){
         interaction.reply("Pong!");
     }
-    if(interaction.commandName === "hello"){
+    if(interaction.commandName === 'hello'){
         let user = interaction.options.getUser('user');
         if(!user) user = interaction.user;
         interaction.reply(`Hello ${user}!`);
     }
+    if(interaction.commandName === 'meow'){
+        interaction.reply(':cat2: :cat2: :cat2:');
+        //interaction.reply('There is a cat on the loose!! \n :cat2:');
+    }
+
+
     //The below will log the interaction in the console if you don't want to print the interaction to the console add // in front of the command. 
     console.log(interaction);
 });
