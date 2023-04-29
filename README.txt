@@ -7,3 +7,4 @@ This will not work without the token key. I have intentionally left that of the 
 As of now it currently runs locally on my laptop at home but can be moved into a persistant workspace so that is is always available. 
 
 People are welcome to use this as a starting point or a reference. I will try to add comments to the main bot.js file to explain what each section of the code is doing.
+rename of file
